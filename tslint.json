@@ -50,7 +50,11 @@
       "trailing-comma": true,
       "no-conditional-assignment": true,
       "no-debugger": true,
-      "no-empty": true
+      "no-empty": true,
+      "ordered-imports": [true, {
+          "import-sources-order": "any",
+          "named-imports-order": "case-insensitive"
+      }]
   },
   "jsRules": {
       "indent": [true, "spaces"],

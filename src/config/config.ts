@@ -10,9 +10,21 @@ const config = {
   },
 
   logger: {
-    consoleLevel: process.env.LOGGER_CONSOLE_LEVEL || 'info',
-    file: process.env.LOGGER_FILE || join(__dirname, '../logs/all.log'),
-    silent: process.env.LOGGER_SILENT === 'true' || false
+    all: {
+      level: process.env.LOGGER_ALL_LEVEL || 'info',
+      path: process.env.LOGGER_ALL_PATH || 'all.log'
+    },
+    console: {
+      level: process.env.LOGGER_CONSOLE_LEVEL || 'info'
+    },
+    disable: process.env.LOGGER_DISABLE === 'true' || false,
+    errors: {
+      level: process.env.LOGGER_ERRORS_LEVEL || 'error',
+      path: process.env.LOGGER_ERRORS_PATH || 'errors.log'
+    },
+    maxFiles: process.env.LOGGER_MAX_SIZE || 5,
+    maxSize: process.env.LOGGER_MAX_SIZE || 5 * 1024 * 1024,
+    path: process.env.LOGGER_PATH || join(__dirname, '../logs')
   },
 
   database: {
