@@ -1,0 +1,50 @@
+{
+   "name": "api-boilerplate",
+   "version": "0.0.1",
+   "description": "Boilerplate for an API using koa",
+   "main": "index.ts",
+   "scripts": {
+      "lint": "tslint -c tslint.json 'src/**/*.ts'",
+      "build": "tsc",
+      "start": "ts-node src/index.ts",
+      "test": "jasmine-ts 'src/**/*.spec.ts'",
+      "watch": "nodemon"
+   },
+   "repository": "git@github.com:lucasmacosta/api-boilerplate.git",
+   "author": "Lucas Acosta <lucasmacosta@gmail.com>",
+   "license": "MIT",
+   "devDependencies": {
+      "@types/dotenv": "^4.0.2",
+      "@types/jasmine": "^2.8.6",
+      "@types/koa": "^2.0.44",
+      "@types/koa-bodyparser": "^4.2.0",
+      "@types/koa-compose": "^3.2.2",
+      "@types/koa-compress": "^2.0.8",
+      "@types/koa-router": "^7.0.27",
+      "@types/node": "^8.0.29",
+      "@types/request-promise": "^4.1.41",
+      "jasmine-spec-reporter": "^4.2.1",
+      "jasmine-ts": "^0.2.1",
+      "nodemon": "^1.17.2",
+      "request": "^2.85.0",
+      "request-promise": "^4.2.2",
+      "ts-node": "3.3.0",
+      "tslint": "^5.9.1",
+      "tslint-eslint-rules": "^5.1.0",
+      "typescript": "2.5.2"
+   },
+   "dependencies": {
+      "bluebird": "^3.5.1",
+      "dotenv": "^5.0.1",
+      "koa": "^2.5.0",
+      "koa-bodyparser": "^4.2.0",
+      "koa-compose": "^4.0.0",
+      "koa-compress": "^2.0.0",
+      "koa-router": "^7.4.0",
+      "moment": "^2.21.0",
+      "mysql": "^2.14.1",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.1.16",
+      "winston": "^2.4.1"
+   }
+}
