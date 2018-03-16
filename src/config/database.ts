@@ -13,7 +13,7 @@ export async function connect(): Promise<Connection> {
     username: config.database.username,
     password: config.database.password,
     logger: databaseLogger,
-    synchronize: false,
+    synchronize: config.database.synchronize,
     dropSchema: config.database.dropSchema,
     entities: [ join(__dirname, '../**/*.entity.{ts,js}') ]
   };

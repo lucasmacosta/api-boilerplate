@@ -33,6 +33,7 @@ module.exports = exports = {
     database: process.env.DATABASE_DATABASE || 'api_boilerplate',
     username: process.env.DATABASE_USERNAME || 'root',
     password: process.env.DATABASE_PASSWORD || '',
-    dropSchema: process.env.DATABASE_DROP_SCHEMA === 'true'
+    dropSchema: process.env.DATABASE_DROP_SCHEMA === 'true',
+    synchronize: process.env.DATABASE_SYNCHRONIZE === 'true'
   }
 };
