@@ -1,6 +1,6 @@
-import { join } from 'path';
+const path = require('path');
 
-const config = {
+module.exports = exports = {
   env: process.env.NODE_ENV || 'development',
 
   api: {
@@ -24,12 +24,15 @@ const config = {
     },
     maxFiles: process.env.LOGGER_MAX_SIZE || 5,
     maxSize: process.env.LOGGER_MAX_SIZE || 5 * 1024 * 1024,
-    path: process.env.LOGGER_PATH || join(__dirname, '../logs')
+    path: process.env.LOGGER_PATH || path.join(__dirname, '../logs')
   },
 
   database: {
-
+    host: process.env.DATABASE_HOST || 'localhost',
+    port: process.env.DATABASE_PORT || '3306',
+    database: process.env.DATABASE_DATABASE || 'api_boilerplate',
+    username: process.env.DATABASE_USERNAME || 'root',
+    password: process.env.DATABASE_PASSWORD || '',
+    dropSchema: process.env.DATABASE_DROP_SCHEMA === 'true'
   }
 };
-
-export default config;

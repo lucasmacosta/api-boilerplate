@@ -1,6 +1,6 @@
 import * as requestPromise from 'request-promise';
 
-import config from '../config/config';
+import * as config from '../config/config';
 
 const baseUrl = 'http://localhost:3001/api/status';
 

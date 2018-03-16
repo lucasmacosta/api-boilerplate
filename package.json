@@ -4,11 +4,13 @@
    "description": "Boilerplate for an API using koa",
    "main": "index.ts",
    "scripts": {
+      "clean": "rimraf build",
       "lint": "tslint -c tslint.json 'src/**/*.ts'",
-      "build": "tsc",
+      "build": "npm run clean && tsc",
       "start": "ts-node src/index.ts",
       "test": "jasmine-ts 'src/**/*.spec.ts'",
-      "watch": "nodemon"
+      "watch": "nodemon",
+      "typeorm": "ts-node ./node_modules/.bin/typeorm"
    },
    "repository": "git@github.com:lucasmacosta/api-boilerplate.git",
    "author": "Lucas Acosta <lucasmacosta@gmail.com>",
@@ -29,6 +31,7 @@
       "nodemon": "^1.17.2",
       "request": "^2.85.0",
       "request-promise": "^4.2.2",
+      "rimraf": "^2.6.2",
       "ts-node": "3.3.0",
       "tslint": "^5.9.1",
       "tslint-eslint-rules": "^5.1.0",

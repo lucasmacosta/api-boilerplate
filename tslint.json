@@ -51,10 +51,8 @@
       "no-conditional-assignment": true,
       "no-debugger": true,
       "no-empty": true,
-      "ordered-imports": [true, {
-          "import-sources-order": "any",
-          "named-imports-order": "case-insensitive"
-      }]
+      "ordered-imports": false,
+      "object-literal-sort-keys": false
   },
   "jsRules": {
       "indent": [true, "spaces"],
